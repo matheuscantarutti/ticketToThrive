@@ -13,5 +13,6 @@ public class Cliente extends Usuario {
     
     public void criarChamado(){
         Chamado call = new Chamado();
+        addChamado(call);
     }
 }

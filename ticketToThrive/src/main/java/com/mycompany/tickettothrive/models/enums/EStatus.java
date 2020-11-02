@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.tickettothrive.models;
+package com.mycompany.tickettothrive.models.enums;
 
 /**
  *
  * @author mathe
  */
-class EStatus {
-    
+public enum EStatus {
+    Urgente, Alta, Normal, Baixa;
 }
