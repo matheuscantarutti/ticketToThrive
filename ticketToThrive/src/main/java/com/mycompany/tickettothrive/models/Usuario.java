@@ -2,7 +2,6 @@
 package com.mycompany.tickettothrive.models;
 
 import com.mycompany.tickettothrive.models.enums.EType;
-import java.util.ArrayList;
 
 
 public class Usuario {
@@ -11,7 +10,6 @@ public class Usuario {
     private String password;
     private EType userType;
     private String departamento;
-    private ArrayList <Chamado> chamados;
 
     public Usuario(String nome, String login, String password, EType userType, String departamento) {
         this.nome = nome;
@@ -61,14 +59,6 @@ public class Usuario {
 
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
-    }
-
-    public ArrayList<Chamado> getChamados() {
-        return chamados;
-    }
-    
-    public void addChamado(Chamado call){
-        chamados.add(call);
     }
 }
 

@@ -2,83 +2,79 @@
 package com.mycompany.tickettothrive.models;
 
 import com.mycompany.tickettothrive.models.enums.EStatus;
-import java.util.Date;
+import java.util.ArrayList;
 
 
 class Chamado {
-    private String descricao;
-    private Date nascimento;
-    private Date obito;
-    private Date evento;
-    private Usuario criador;
+    private ArrayList <Evento> eventos;
+    private Cliente criador;
+    private Tecnico atendente;
     private EStatus prioridade;
-    private boolean prazo;
+    private Evento nascimento;
+    private Evento obito;
 
-    public Chamado(String descricao, Date nascimento, Usuario criador, EStatus status) {
-        this.descricao = descricao;
-        this.nascimento = nascimento;
+    public Chamado(Cliente criador, EStatus prioridade, Evento nascimento) {
         this.criador = criador;
-        this.prioridade = status;
+        this.prioridade = prioridade;
+        this.nascimento = nascimento;
     }
 
     public Chamado() {
     }
 
-    public String getDescricao() {
-        return descricao;
+    public Tecnico getAtendente() {
+        return atendente;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setAtendente(Tecnico atendente) {
+        this.atendente = atendente;
     }
 
-    public Date getNascimento() {
+    public Evento getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(Evento nascimento) {
         this.nascimento = nascimento;
     }
 
-    public Date getObito() {
+    public Evento getObito() {
         return obito;
     }
 
-    public void setObito(Date obito) {
+    public void setObito(Evento obito) {
         this.obito = obito;
     }
 
-    public Date getEvento() {
-        return evento;
+    public ArrayList<Evento> getEventos() {
+        return eventos;
+    }
+    
+    public void addEvento(Evento ocorrencia){
+        eventos.add(ocorrencia);
     }
 
-    public void setEvento(Date evento) {
-        this.evento = evento;
-    }
-
-    public Usuario getCriador() {
+    public Cliente getCriador() {
         return criador;
     }
 
-    public void setCriador(Usuario criador) {
+    public void setCriador(Cliente criador) {
         this.criador = criador;
     }
 
-    public EStatus getStatus() {
+    public EStatus getPrioridade() {
         return prioridade;
     }
 
-    public void setStatus(EStatus prioridade) {
+    public void setPrioridade(EStatus prioridade) {
         this.prioridade = prioridade;
     }
 
-    public boolean isPrazo() {
-        return prazo;
-    }
+    
+    
+   
 
-    public void setPrazo(boolean prazo) {
-        this.prazo = prazo;
-    }
+   
     
     
 
