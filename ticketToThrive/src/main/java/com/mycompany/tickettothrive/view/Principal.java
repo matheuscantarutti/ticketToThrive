@@ -97,6 +97,11 @@ public class Principal extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jButton2.setText("Criar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCriaChamado(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jButton3.setText("Alterar");
@@ -210,6 +215,13 @@ public class Principal extends javax.swing.JFrame {
       
       login.setVisible(true);
     }//GEN-LAST:event_formWindowOpened
+
+    private void BtnCriaChamado(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCriaChamado
+       Cadastro novoChamado = new Cadastro();
+       
+       novoChamado.setVisible(true);
+       
+    }//GEN-LAST:event_BtnCriaChamado
 
     /**
      * @param args the command line arguments
