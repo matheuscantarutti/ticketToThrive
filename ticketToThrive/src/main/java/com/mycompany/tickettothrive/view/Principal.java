@@ -69,7 +69,7 @@ public class Principal extends javax.swing.JFrame {
         jButton2.setText("Selecionar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnCriaChamado(evt);
+                BtnSelecionaChamado(evt);
             }
         });
 
@@ -194,9 +194,9 @@ public class Principal extends javax.swing.JFrame {
       login.setVisible(true);
     }//GEN-LAST:event_formWindowOpened
 
-    private void BtnCriaChamado(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCriaChamado
+    private void BtnSelecionaChamado(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSelecionaChamado
         
-    }//GEN-LAST:event_BtnCriaChamado
+    }//GEN-LAST:event_BtnSelecionaChamado
 
     private void btnEncerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEncerrarActionPerformed
         System.exit(0);
