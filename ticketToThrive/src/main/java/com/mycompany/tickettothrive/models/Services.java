@@ -9,7 +9,7 @@ package com.mycompany.tickettothrive.models;
  *
  * @author mathe
  */
-public class Servicos {
+public class Services {
     
     public static String verificaEmpresa(String empresa){
         if(empresa.equals("teste")){

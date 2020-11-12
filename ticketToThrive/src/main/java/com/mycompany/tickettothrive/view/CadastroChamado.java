@@ -9,16 +9,16 @@ package com.mycompany.tickettothrive.view;
  *
  * @author mathe
  */
-public class Cadastro extends javax.swing.JFrame {
+public class CadastroChamado extends javax.swing.JFrame {
 
     /**
      * Creates new form Cadastro
      */
-    public Cadastro() {
+    public CadastroChamado() {
         initComponents();
     }
     
-    public Cadastro(int idChamado) {
+    public CadastroChamado(int idChamado) {
         initComponents();
         
     }
@@ -73,6 +73,11 @@ public class Cadastro extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(240, 0, 0));
         jButton4.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jButton4.setText("Sair");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -130,24 +135,29 @@ public class Cadastro extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(38, 38, 38)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarChamadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarChamadoActionPerformed
         setVisible(false);
     }//GEN-LAST:event_btnGuardarChamadoActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,20 +176,21 @@ public class Cadastro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroChamado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroChamado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroChamado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroChamado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cadastro().setVisible(true);
+                new CadastroChamado().setVisible(true);
             }
         });
     }

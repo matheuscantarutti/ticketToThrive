@@ -29,11 +29,19 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Novo chamado"/>
+                <Property name="text" type="java.lang.String" value="Novo Chamado"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="novoChamadoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Novo Usu&#xe1;rio"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

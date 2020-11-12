@@ -5,7 +5,7 @@
  */
 package com.mycompany.tickettothrive.view;
 
-import com.mycompany.tickettothrive.models.Servicos;
+import com.mycompany.tickettothrive.models.Services;
 import javax.swing.JOptionPane;
 
 /**
@@ -202,8 +202,8 @@ public class Login extends javax.swing.JDialog {
         String senhaUsuario = loginSenhaInput.getText();
         
         
-        if (Servicos.verificaEmpresa(empresa) != null) {
-            if (Servicos.verificaLogin(loginUsuario, senhaUsuario) != null) {
+        if (Services.verificaEmpresa(empresa) != null) {
+            if (Services.verificaLogin(loginUsuario, senhaUsuario) != null) {
 
                 setVisible(false);
 
