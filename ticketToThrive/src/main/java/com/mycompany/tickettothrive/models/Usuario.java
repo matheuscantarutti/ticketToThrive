@@ -5,6 +5,7 @@ import com.mycompany.tickettothrive.models.enums.EType;
 
 
 public class Usuario {
+    private int id;
     private String nome;
     private String login;
     private String password;
@@ -17,10 +18,17 @@ public class Usuario {
         this.password = password;
         this.userType = userType;
         this.departamento = departamento;
+        
     }
 
-    
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNome() {
         return nome;
     }

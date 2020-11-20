@@ -10,5 +10,5 @@ package com.mycompany.tickettothrive.models.enums;
  * @author mathe
  */
 public enum EType {
-    Cliente, Técnico;
+    Cliente, Tecnico;
 }
