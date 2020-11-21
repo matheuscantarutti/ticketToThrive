@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 class Chamado {
     private ArrayList <Evento> eventos;
-    private int codigo = 0;
+    private int id = 0;
     private Cliente criador;
     private Tecnico atendente;
     private EStatus prioridade;
@@ -73,10 +73,10 @@ class Chamado {
     }
 
     public int getCodigo() {
-        return this.codigo;
+        return this.id;
     }
 
     public void setCodigo() {
-        this.codigo++;
+        this.id++;
     } 
 }

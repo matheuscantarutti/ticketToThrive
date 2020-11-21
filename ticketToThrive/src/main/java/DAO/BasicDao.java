@@ -16,5 +16,6 @@ public interface BasicDao {
     public void alter();
     public void delete ();
     public Empresa searchEmpresaPerId(int id);
+    public int count(); 
     
 }
