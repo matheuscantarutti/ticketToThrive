@@ -19,20 +19,12 @@ public class ConnectionDataBase {
     
     private static Connection connection;
     
-    public static Connection getConnection(){
+    public static Connection getConnection() throws ClassNotFoundException, SQLException{
         if(connection == null){
+            Class.forName("com.mysql.cj.jdbc.Driver");
+                
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/julobras", "root", "senha");
             
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-            } catch (ClassNotFoundException ex) {
-               System.out.println("Driver não encontrado");
-            }
-            
-            try {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/julobras", "root", "Matheus19Planswolf25@#$");
-            } catch (SQLException ex) {
-                System.out.println("Não consegui conectar no banco");
-            }
         }
         
         return connection;

@@ -5,7 +5,7 @@
  */
 package com.mycompany.tickettothrive.view;
 
-import com.mycompany.tickettothrive.models.Services;
+import services.Services;
 import javax.swing.JOptionPane;
 
 /**

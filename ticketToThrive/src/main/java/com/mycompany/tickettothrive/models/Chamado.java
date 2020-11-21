@@ -2,26 +2,44 @@
 package com.mycompany.tickettothrive.models;
 
 import com.mycompany.tickettothrive.models.enums.EStatus;
-import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 
 class Chamado {
-    private ArrayList <Evento> eventos;
-    private int id = 0;
+    private int id;
+    private String descricao;
+    private String tratamento;
     private Cliente criador;
     private Tecnico atendente;
     private EStatus prioridade;
-    private Evento nascimento;
-    private Evento obito;
+    private Date nascimento;
+    private Date obito;
 
-    public Chamado(Cliente criador, EStatus prioridade, Evento nascimento) {
+    public Chamado(String descricao, Cliente criador, EStatus prioridade) {
+        this.descricao = descricao;
         this.criador = criador;
         this.prioridade = prioridade;
-        this.nascimento = nascimento;
-        setCodigo();
+        this.nascimento = Calendar.getInstance().getTime();
     }
 
     public Chamado() {
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getTratamento() {
+        return tratamento;
+    }
+
+    public void setTratamento(String tratamento) {
+        this.tratamento = tratamento;
     }
 
     public Tecnico getAtendente() {
@@ -32,28 +50,16 @@ class Chamado {
         this.atendente = atendente;
     }
 
-    public Evento getNascimento() {
+    public Date getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Evento nascimento) {
-        this.nascimento = nascimento;
-    }
-
-    public Evento getObito() {
+    public Date getObito() {
         return obito;
     }
 
-    public void setObito(Evento obito) {
+    public void setObito(Date obito) {
         this.obito = obito;
-    }
-
-    public ArrayList<Evento> getEventos() {
-        return eventos;
-    }
-    
-    public void addEvento(Evento ocorrencia){
-        eventos.add(ocorrencia);
     }
 
     public Cliente getCriador() {
@@ -72,11 +78,11 @@ class Chamado {
         this.prioridade = prioridade;
     }
 
-    public int getCodigo() {
+    public int getId() {
         return this.id;
     }
 
-    public void setCodigo() {
-        this.id++;
+    public void setId(int id) {
+        this.id = id;
     } 
 }

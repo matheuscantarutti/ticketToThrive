@@ -6,16 +6,17 @@
 package DAO;
 
 import com.mycompany.tickettothrive.models.Empresa;
+import java.sql.SQLException;
 /**
  *
  * @author mathe
  */
-public interface BasicDao {
+public interface BasicDao<C, K> {
     
-    public void insert();
-    public void alter();
-    public void delete ();
-    public Empresa searchEmpresaPerId(int id);
-    public int count(); 
+    public void insert(C t)throws ClassNotFoundException, SQLException ;
+    public void alter(C t) throws ClassNotFoundException, SQLException;
+    public void delete(C t) throws ClassNotFoundException, SQLException; 
+    public C searchPerId(K id) throws ClassNotFoundException, SQLException;
+    public int count() throws ClassNotFoundException, SQLException; 
     
 }
