@@ -5,7 +5,6 @@
  */
 package DAO;
 
-import com.mycompany.tickettothrive.models.Empresa;
 import java.sql.SQLException;
 /**
  *
