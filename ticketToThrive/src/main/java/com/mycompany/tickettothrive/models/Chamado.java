@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 
-class Chamado {
+public class Chamado {
     private int id;
     private String descricao;
     private String tratamento;
